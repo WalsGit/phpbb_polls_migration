@@ -109,7 +109,7 @@ try {
         $insert->bindParam(':discussion_id', $row["discussion_id"], PDO::PARAM_INT);
 
         $insert->execute();
-        echo 'POLL [' . $row["discussion_id"] . '] ' . $row["questions"] . ' [SETTINGS MIGRATED]<br>';
+        echo 'POLL [' . $row["discussion_id"] . '] ' . $row["question"] . ' [SETTINGS MIGRATED]<br>';
     }
 } catch(PDOException $e) {
     echo '<strong>ERROR</strong>: ' . $e->getMessage();
